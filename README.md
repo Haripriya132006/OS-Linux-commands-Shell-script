@@ -42,24 +42,24 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 18-47-29.png>)
 
 
 cat < file2
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 18-49-28.png>)
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ![alt text](<Screenshot from 2024-02-20 18-53-23.png>)
 comm file1 file2
  ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 18-53-54.png>)
  
 diff file1 file2
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 18-54-29.png>)
 
 #Filters
 
@@ -82,67 +82,67 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 19-00-24.png>)
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 19-02-46.png>)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+![alt text](<Screenshot from 2024-02-20 19-03-22.png>)
 
-
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
 ^d
 ````
-cat > newfile 
+cat < newfile 
 Hello world
 hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 19-08-43.png>)
 
 
 grep hello newfile 
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-20 19-09-12.png>)
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 19-11-22.png>)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-20 19-13-27.png>)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-20 19-14-13.png>)
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-21 23-23-37.png>)
 
 
 grep -w -n world newfile   
 ## OUTPUT
+![alt text](<Screenshot from 2024-02-22 08-25-08.png>)
 
-
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
@@ -152,71 +152,70 @@ Linux is best in this World
 ^d
 ```
 
-cat > newfile
+cat <newfile
 ```
 Hello world
 hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
-^d
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-25 17-23-27.png>)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-25 17-23-44.png>)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 17-24-48.png>)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 17-26-03.png>)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 17-26-46.png>)
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 17-27-45.png>)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 17-28-27.png>)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-17-08.png>)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-18-28.png>)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-19-25.png>)
 
 egrep l{2} newfile
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-20-15.png>)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![alt text](<Screenshot from 2024-02-25 18-21-23.png>)
 
 cat > file23
 ```
@@ -234,79 +233,76 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-30-07.png>)
 
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-31-10.png>)
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-32-19.png>)
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-33-03.png>)
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-25 18-34-13.png>)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-25 18-36-28.png>)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+![alt text](<Screenshot from 2024-02-25 18-37-14.png>)
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-38-00.png>)
 
 
 seq 10 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-38-59.png>)
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-40-01.png>)
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 18-54-37.png>)
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-02-10.png>)
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-02-44.png>)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-03-17.png>)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
-
-
-sed -n '2,4{s/$/*/;p}' file23
+![alt text](<Screenshot from 2024-02-25 19-04-13.png>)
 
 
 #Sorting File content
@@ -320,7 +316,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-09-07.png>)
 
 cat > file22
 ```
@@ -333,22 +329,22 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-04-13.png>)
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-
-cat < urllist.txt
+![alt text](<Screenshot from 2024-02-25 19-15-20.png>)
+cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
 ^d
  ```
-cat > urllist.txt
+cat < urllist.txt
 ```
 www. yahoo. com
 www. google. com
@@ -356,18 +352,18 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-17-13.png>)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-18-22.png>)
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-25 19-19-55.png>)
 
 mkdir backupdir
  
