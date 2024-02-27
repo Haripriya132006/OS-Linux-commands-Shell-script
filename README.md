@@ -376,14 +376,17 @@ tar -tvf backup.tar
 tar -xvf backup.tar
 ## OUTPUT
 ![alt text](<Screenshot from 2024-02-27 13-27-09.png>)
+
 gzip backup.tar
 
-ls .gz
+ls *.gz
 ## OUTPUT
- 
+ ![alt text](<Screenshot from 2024-02-27 14-14-33.png>)
 gunzip backup.tar.gz
+ls *.gz
+la *.tar
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-27 14-16-05.png>)
  
 # Shell Script
 ```
@@ -393,7 +396,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-27 19-26-08.png>)
  
 cat << stop > herecheck.txt
 ```
@@ -405,9 +408,9 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+![alt text](<Screenshot from 2024-02-27 19-26-08.png>)
 
-
-cat < scriptest.sh 
+cat > scriptest.sh 
 ```bash
 \#!/bin/sh
 echo “File name is $0 ”
@@ -433,7 +436,7 @@ echo “Second arg. is ” $2
 echo “Third arg. is ” $3
 echo “Fourth arg. is ” $4
 echo 'The $@ is ' $@
-echo 'The $\# is ' $\#
+echo 'The $\# is ' $#
 echo 'The $$ is ' $$
 ps
 ```
@@ -443,13 +446,14 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-27 19-48-25.png>)
  
 ls file1
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-27 19-51-23.png>)
 echo $?
 ## OUTPUT 
+![alt text](<Screenshot from 2024-02-27 19-51-45.png>)
 ./one
 bash: ./one: Permission denied
  
@@ -1080,6 +1084,9 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+chmod 777 palindrome.sh
+./palindrome.sh
+
 ## OUTPUT 
 
 
