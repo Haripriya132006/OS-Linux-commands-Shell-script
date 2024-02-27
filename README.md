@@ -396,7 +396,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-![alt text](<Screenshot from 2024-02-27 19-26-08.png>)
+![alt text](<Screenshot from 2024-02-27 19-23-29.png>)
  
 cat << stop > herecheck.txt
 ```
@@ -451,9 +451,11 @@ chmod 777 scriptest.sh
 ls file1
 ## OUTPUT
 ![alt text](<Screenshot from 2024-02-27 19-51-23.png>)
+
 echo $?
 ## OUTPUT 
 ![alt text](<Screenshot from 2024-02-27 19-51-45.png>)
+
 ./one
 bash: ./one: Permission denied
  
