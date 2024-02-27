@@ -336,7 +336,7 @@ uniq file22
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-![alt text](<Screenshot from 2024-02-25 19-15-20.png>)
+
 cat > urllist.txt
 ```
 www. yahoo. com
@@ -352,18 +352,18 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-![alt text](<Screenshot from 2024-02-25 19-17-13.png>)
+
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-![alt text](<Screenshot from 2024-02-25 19-18-22.png>)
+
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-![alt text](<Screenshot from 2024-02-25 19-19-55.png>)
+
 
 mkdir backupdir
  
@@ -371,11 +371,11 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-![alt text](<Screenshot from 2024-02-27 13-26-34.png>)
+
 
 tar -xvf backup.tar
 ## OUTPUT
-![alt text](<Screenshot from 2024-02-27 13-27-09.png>)
+
 gzip backup.tar
 
 ls .gz
