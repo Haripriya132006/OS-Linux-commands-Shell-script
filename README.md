@@ -456,8 +456,7 @@ echo $?
 ## OUTPUT 
 ![alt text](<Screenshot from 2024-02-27 19-51-45.png>)
 
-./one
-bash: ./one: Permission denied
+./one bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
@@ -471,9 +470,9 @@ echo $?
  
 # mis-using string comparisons
 
-cat < strcomp.sh 
+cat > strcomp.sh 
 ```bash
-\#!/bin/bash
+\#!/bin/sh
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -487,7 +486,7 @@ fi
 
 cat strcomp.sh 
 ```bash
-\#!/bin/bash
+\#!/bin/sh
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -497,18 +496,18 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
-
+## OUTPUT
+![alt text](<Screenshot from 2024-02-28 22-06-26.png>)
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-28 22-10-00.png>)
 
 # check file ownership
-cat < psswdperm.sh 
+cat >psswdperm.sh 
 ```bash
 \#!/bin/bash
 if [ -O /etc/passwd ]
@@ -530,9 +529,11 @@ else
 echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
  ```
+ chmod 755 psswdperm.sh
+
 ./psswdperm.sh
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-28 22-23-41.png>)
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -575,10 +576,10 @@ else
 echo “Sorry, the object does not exist”
 fi
 ```
-
+chmod 755 ifnested.sh
 ./ifnested.sh 
 ## OUTPUT
-
+![alt text](<Screenshot from 2024-02-28 22-36-05.png>)
 
 
 # using numeric test comparisons
@@ -673,7 +674,7 @@ $ ./ifnested.sh
 ##OUTPUT
 
 # looking for a possible value using elif
-cat elifcheck.sh 
+cat > elifcheck.sh 
 ```bash
 \#!/bin/bash
 if [ $USER = Ram ]
